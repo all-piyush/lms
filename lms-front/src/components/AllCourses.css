@@ -4,34 +4,15 @@
     gap:2rem;
     padding: 2rem;
     flex: 1;
-}
-#searchbox{
-    display: flex;
-    align-items: center;
+    background-color: #f6f8fc;
     position: relative;
 }
-#searchbox #search-icon{
-    position: absolute;
-    margin-left: 0.5rem;
-}
-#searchbox input{
-    height: 2rem;
-    width: 20rem;
-    border-radius: 0.5rem;
-    border: 1px solid black;
-    font-size: 1rem;
-    padding-left: 2rem;
-}
 
-#courses{
+#all-courses{
     
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
     gap:30px;
-}
-#courses-heading{
-    font-size: 1.5rem;
-    color: #603fef;
 }
 #course{
     display: flex;
@@ -56,4 +37,10 @@
 #course-content-title{
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+@media(max-width:600px){
+    #all-courses{
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
 }

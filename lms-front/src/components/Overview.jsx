@@ -35,10 +35,10 @@ const Overview = () => {
               <b id='thumbnails-heading'>Enrolled Courses :-</b>
               <div id="thumbnails">
                 {enrolledcourses.map((courses)=>{
-                return <div id="thumbnail">
+                return <div className="thumbnail">
                   <img src={courses.course.image}></img>
-                  <div id='thumbnail-content'>
-                  <div id="thumbnail-content-title" onClick={()=>{navigate('/studentdashboard/enrolled-courses');setclicked('enrolled-courses')}}>{courses.course.title}</div>
+                  <div className='thumbnail-content'>
+                  <div className="thumbnail-content-title" onClick={()=>{navigate('/studentdashboard/enrolled-courses');setclicked('enrolled-courses')}}>{courses.course.title}</div>
                   <div>Course Duration: {courses.course.duration}</div>
                   <div>Course Status: <i>{courses.status}</i></div>
                   </div>

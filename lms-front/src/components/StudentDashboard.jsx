@@ -5,6 +5,7 @@ import { RiGraduationCapFill } from "react-icons/ri";
 import { MdAssignment } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaRegStar  } from "react-icons/fa";
+import { CiMenuBurger } from "react-icons/ci";
 import { useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -24,6 +25,7 @@ const StudentDashboard = () => {
           console.log(error);
         }
       }
+      
       useEffect(()=>{
         fetchcourses();
       },[])
@@ -31,8 +33,8 @@ const StudentDashboard = () => {
   const navigate=useNavigate();
   return (
     <div id="student-dashboard">
-      <div id='dashboard-sidebar'>
-        <div id="dashboard-heading"><FaGraduationCap></FaGraduationCap>Dashboard</div>
+      <div className={`dashboard-sidebar`}>
+        <div id="dashboard-heading"><FaGraduationCap></FaGraduationCap>Dashboard </div>
         <div id="sidebar-options">
           <div className={clicked==='overview'?'Active':''} onClick={()=>{setclicked('overview') ;navigate('overview')}}><IoHomeSharp></IoHomeSharp>Overview</div>
           <div className={clicked==='enrolled-courses'?'Active':''}  onClick={()=>{setclicked('enrolled-courses');navigate('enrolled-courses')}}><RiGraduationCapFill></RiGraduationCapFill>Enrolled</div>
@@ -42,6 +44,7 @@ const StudentDashboard = () => {
         </div>
       </div>
       <br/>
+      
       <Outlet context={{enrolledcourses,setclicked}}></Outlet>
     </div>
 

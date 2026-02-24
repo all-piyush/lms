@@ -4,17 +4,18 @@
     gap:2rem;
     padding: 2rem;
     flex: 1;
+    background-color: #f6f8fc;
 }
-#searchbox{
+.searchbox{
     display: flex;
     align-items: center;
     position: relative;
 }
-#searchbox #search-icon{
+.searchbox #search-icon{
     position: absolute;
     margin-left: 0.5rem;
 }
-#searchbox input{
+.searchbox input{
     height: 2rem;
     width: 20rem;
     border-radius: 0.5rem;
@@ -23,17 +24,17 @@
     padding-left: 2rem;
 }
 
-#courses{
+#enrolled-courses{
     
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
     gap:30px;
 }
-#courses-heading{
+.content-heading{
     font-size: 1.5rem;
-    color: #603fef;
+    color: black;
 }
-#course{
+.enrolled-course{
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
@@ -41,19 +42,24 @@
   border:1px solid #e8e9eb;
   border-radius:18px;
 }
-#course img{
+.enrolled-course img{
     width: 100%;
     height: 12rem;
     border-radius: 18px 18px 0 0;
 }
-#course-content{
+.enrolled-course-content{
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
     gap:0.5rem;
     color: black;
 }
-#course-content-title{
+.enrolled-course-content-title{
     font-size: 1.2rem;
     font-weight: bold;
+}
+@media(max-width:600px){
+    #enrolled-courses{
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
 }

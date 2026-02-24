@@ -27,12 +27,12 @@ const AllCourses = () => {
         },[])
   return (
       <div id="allcourses">
-              <div id="content-heading">All Courses</div>
-              <div id="searchbox">
+              <div className="content-heading">All Courses</div>
+              <div className="searchbox">
               <FaSearch id="search-icon"></FaSearch>
               <input type='text' value={search} placeholder='Enter text to search' onChange={(e)=>setsearch(e.target.value)}></input>
               </div>
-              <div id="courses">
+              <div id="all-courses">
                 {courses.map((course)=>{
                 return <div id="course">
                   <img src={course.image}></img>

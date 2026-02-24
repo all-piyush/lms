@@ -1,12 +1,4 @@
-#dashboard-heading{
-    font-size: 1.5rem;
-    font-weight: bold;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
+
 #dashboard-content{
     padding: 2rem;
     display: flex;
@@ -16,7 +8,8 @@
     background-color: #F6F8FC;
 }
 #dashboard-progress{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     gap:2rem;
 }
 #dashboard-progress>div {
@@ -43,18 +36,15 @@
     color: #bebebe;
 }
 #thumbnails{
-    /*display: flex;
-    justify-content:space-evenly;
-    flex-wrap: wrap;
-    gap:2rem;*/
+    
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap:30px;
 }
 #thumbnails-heading{
     font-size: 1.5rem;
 }
-#thumbnail{
+.thumbnail{
     display: flex;
     border-radius: 0.5rem;
   background:#fafafa;
@@ -62,19 +52,38 @@
   gap:1rem;
   border-radius: 1rem;
 }
-#thumbnail img{
+.thumbnail img{
     width: 6rem;
     border-radius: 1rem 0 0 1rem;
 }
-#thumbnail-content{
+.thumbnail-content{
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
     gap:0.5rem;
     color: black;
 }
-#thumbnail-content-title{
+.thumbnail-content-title{
     font-size: 1.2rem;
     font-weight: bold;
     cursor:pointer;
+}
+@media(max-width:1000px){
+    .dashboard-progress-innera{
+        font-size: large;
+    }
+    .dashboard-progress-innerb{
+        font-size: x-large;
+    }
+    #dashboard-progress{
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    }
+}
+@media(max-width:600px){
+    #dashboard-progress{
+        grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    }
+    #thumbnails{
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    }
 }
