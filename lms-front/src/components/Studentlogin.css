@@ -1,0 +1,71 @@
+#login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+}
+#login-container{
+    display: flex;
+    gap:1rem;
+    background-color: white;
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#login-img{
+    width: 20rem;
+    height: 30rem;
+}
+#login-form{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+}
+#loginform-heading{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.input{
+
+    height: 2rem;
+    width: 15rem;
+    font-size: 1rem;
+    border-radius:0.5rem;
+    border: 1px solid black;
+    padding:0.2rem 0.2rem;
+}
+#submitlogin{
+    height: 2.5rem;
+    width: 8rem;
+    font-size: 1rem;
+    background-color: #1e90fa;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+#newuser{
+    background-color: white;
+    border: none;
+    color: #1e90fa;
+    align-self: flex-end;
+    margin-top: -0.9rem;
+    cursor: pointer;
+}
+@media(max-width:700px){
+    #login-container{
+        flex-direction: column;
+    }
+    #login-img{
+        width: 18rem;
+        height: 14rem;
+    }
+    .input{
+        width: 18rem;
+    }
+    
+}

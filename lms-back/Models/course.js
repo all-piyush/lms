@@ -1,0 +1,41 @@
+const mongoose=require('mongoose');
+const courseschema=new mongoose.Schema({
+    title:{
+        type:String,
+        required:true,
+    },
+    description:{
+        type:String,
+        required:true,
+    },
+    image:{
+        type:String,
+        required:true,
+    },
+    level:{
+        type:String,
+        enum:["beginner","intermediate","advanced"],
+        required:true,
+    },
+    price:{
+        type:String,
+        required:true,
+    },
+    instructor:{
+        type:String,
+        required:true,
+    },
+    lessons:{
+        type:String,
+        required:true,
+    },
+    duration:{
+        type:String,
+        required:true,
+    },
+    createdat:{
+        type:Date,
+        default:Date.now,
+    }
+})
+module.exports=mongoose.model("Courses",courseschema);
